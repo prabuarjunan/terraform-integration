@@ -14,7 +14,7 @@ resource "aws_instance" "AmazonLinux1" {
   connection {
     # The default username for our AMI
     user = "ec2-user"
-    private_key = "${file("/Users/arjunan/Downloads/Prabu-handson.pem")}"
+    private_key = "${file("/Users/*/Downloads/*.pem")}"
 
     # The connection will use the local SSH agent for authentication.
   }

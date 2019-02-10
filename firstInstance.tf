@@ -16,12 +16,12 @@ resource "aws_instance" "AmazonLinux1" {
     user = "ec2-user"
     private_key = "${file("/Users/*/Downloads/*.pem")}"
 
-    # The connection will use the local SSH agent for authentication.
   }
 
   # We run a remote provisioner on the instance after creating it.
-  # In this case, we just install nginx and start it. By default,
+  # In this case, w By default,
   # this should be on port 80
+  # mount the already created CVS volume
 
   provisioner "remote-exec" {
     inline = [
